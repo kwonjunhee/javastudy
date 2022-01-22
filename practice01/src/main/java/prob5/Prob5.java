@@ -1,28 +1,21 @@
 package prob5;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Prob5 {
 
 	public static void main(String[] args) {
-		int cnt=0;
-		boolean flag = false;
 		for(int i=1; i<=99; i++) {
+			int cnt=0;
 			String[] arr = Integer.toString(i).split("");
-			List<String> list = new ArrayList<String>(Arrays.asList(arr));
-			if(list.contains("3")||list.contains("6")||list.contains("9")) {
-				list.add("짝");
-			}
-			if(list.contains("짝")) {
-				for(String li:list) {
-					System.out.print(li);
+			for(int j=0; j<arr.length;j++) {
+				if(arr[j].equals("3")||arr[j].equals("6")||arr[j].equals("9")) {
+					cnt++;
 				}
-				System.out.print("\n");
 			}
-			
-		}
-		
+			System.out.print("\n"+i);
+			for(int j=0;j<cnt;j++) {
+				System.out.print(" 짝");
+			}
+		}		
 	}
 }
