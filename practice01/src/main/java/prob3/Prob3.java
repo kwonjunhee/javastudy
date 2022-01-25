@@ -10,22 +10,10 @@ public class Prob3 {
 		int num = scanner.nextInt();
 		int ans=0;
 		
-		while(num/2>0) {
-			ans += num;e=j
+		while(num/2>=0 && num>0) {
+			ans += num;
 			num-=2;
-			System.out.println(num);
-			
 		}
-		
-//		for(int i=0; i<num/2; i++) {
-//			ans += num;
-//			
-//			num-=2;
-//			System.out.println(num);
-//		}
-		
-
-		
 		System.out.println("결과 값:"+ans);
 		scanner.close();
 	}
